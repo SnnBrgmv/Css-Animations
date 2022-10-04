@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planets</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: rgb(33, 33, 33);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            position: relative;
+            width: 40%;
+            height: 100vh;
+            transform: scale(0.9);
+        }
+
+        .sun {
+            width: 23%;
+            height: 23%;
+            position: absolute;
+            border-radius: 50%;
+            transform: translate(170%, 150%);
+            background-image: url(sun.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 100%;
+        }
+
+        .earth {
+            width: 10%;
+            height: 10%;
+            position: absolute;
+            border-radius: 50%;
+            transform: translate(450%, 260%);
+            background-image: url(earth.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 100%;
+            animation: moveEarth 9s linear infinite;
+        }
+
+        .venus {
+            width: 10%;
+            height: 10%;
+            position: absolute;
+            border-radius: 50%;
+            transform: translate(210%, 400%);
+            background-image: url(venus.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 100%;
+            animation: moveVenus 9s linear infinite;
+        }
+
+        .neptune {
+            width: 10%;
+            height: 10%;
+            position: absolute;
+            border-radius: 50%;
+            transform: translate(750%, 450%);
+            background-image: url(neptune.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 100%;
+            animation: moveNeptune 9s linear infinite;
+        }
+
+        @keyframes moveEarth {
+            0% {
+                transform: rotate(0deg);
+                transform: translate(450%, 260%);
+            }
+
+            25% {
+                transform: rotate(90deg);
+                transform: translate(750%, 450%);
+            }
+
+            50% {
+                transform: rotate(180deg);
+                transform: translate(450%, 550%);
+            }
+
+            75% {
+                transform: rotate(270deg);
+                transform: translate(210%, 400%);
+            }
+
+            100% {
+                transform: rotate(360deg);
+                transform: translate(450%, 260%);
+            }
+        }
+
+        @keyframes moveVenus {
+            0% {
+                transform: rotate(0deg);
+                transform: translate(210%, 400%);
+            }
+
+            25% {
+                transform: rotate(90deg);
+                transform: translate(450%, 260%);
+            }
+
+            50% {
+                transform: rotate(180deg);
+                transform: translate(750%, 450%);
+            }
+
+            75% {
+                transform: rotate(270deg);
+                transform: translate(450%, 550%);
+            }
+
+            100% {
+                transform: rotate(360deg);
+                transform: translate(210%, 400%);
+            }
+        }
+
+        @keyframes moveNeptune {
+            0% {
+                transform: rotate(0deg);
+                transform: translate(750%, 450%);
+            }
+
+            25% {
+                transform: rotate(90deg);
+                transform: translate(450%, 550%);
+            }
+
+            50% {
+                transform: rotate(180deg);
+                transform: translate(210%, 400%);
+            }
+
+            75% {
+                transform: rotate(270deg);
+                transform: translate(450%, 260%);
+            }
+
+            100% {
+                transform: rotate(360deg);
+                transform: translate(750%, 450%);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="sun"></div>
+        <div class="earth"></div>
+        <div class="venus"></div>
+        <div class="neptune"></div>
+    </div>
+</body>
+
+</html>
